@@ -1,6 +1,5 @@
 package entities;
 
-
 import java.text.NumberFormat;
 
 import javax.swing.JOptionPane;
@@ -64,7 +63,7 @@ public class Funcionario {
 	/*
 	 * Método para calcular o pagamento de um funcionario.
 	 * */
-	public double calcularPagamento() {
+	public double calcularPagamento(double taxa) {
 		
 		// Calcular horas noturnas.
 		double calcularValorNoturna = horasNoturnas * 20/100;
@@ -73,7 +72,7 @@ public class Funcionario {
 		double diferencaHoras = horasTrabalhadas - horasNoturnas;
 		
 		// Calcular o salario final.
-		double calcularSalario = horasTrabalhadas * valorPorHora + calcularValorNoturna; 
+		double calcularSalario = horasTrabalhadas * valorPorHora + calcularValorNoturna+taxa; 
 		
 		// Retorna o salario.
 		return calcularSalario;
@@ -107,11 +106,12 @@ public class Funcionario {
 		
 		NumberFormat dinheiro = NumberFormat.getCurrencyInstance();
 		
-		mensagem += "\nSalario: " + dinheiro.format(calcularPagamento()) ;
+		mensagem += "\nSalario: " + dinheiro.format(calcularPagamento(0));
 		
 		JOptionPane.showMessageDialog(null, mensagem);
 		
 	}
+
 	
 
 }

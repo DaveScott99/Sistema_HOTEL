@@ -20,7 +20,7 @@ public class Manobrista extends Funcionario{
 		//Pegando o valor original que vem da classe funcionário
 		double salario = super.calcularPagamento();
 		//adicionando mais 5% para o salário do manobrista
-		return salario = salario + (0.05 * salario);
+		return salario = salario + (salario * (carrosGuardados * 0.05) / 10);
 	}
 	
 	

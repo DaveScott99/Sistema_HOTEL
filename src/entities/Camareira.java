@@ -13,8 +13,9 @@ public class Camareira extends Funcionario {
 	}
 
 	@Override
-	public double calcularPagamento(double taxa) {
-		return super.calcularPagamento(taxa*quartosArrumados);
+	public double calcularPagamento() {
+		double salario = super.calcularPagamento();
+		return salario = salario +(salario *(quartosArrumados * 0.5)/10);
 	}
 	
 }

@@ -1,3 +1,4 @@
+
 package entities;
 
 public class Atendente extends Funcionario {
@@ -14,13 +15,16 @@ public class Atendente extends Funcionario {
 	
 	//Método com Override
 	
+	//Método de calcular pagamento com override
 	@Override
-	public double calcularPagamento() {
-		//Pega o valor calculado
-		double salario = super.calcularPagamento();
+	public void calcularPagamento(double carrosGuardados) {
 		
-		//Adicionando a porcentagem para cada quarto alugado
-		return salario = salario + (salario * (quartosAlugados * 0.08) / 10);
+		//Pegando o valor original que vem da classe funcionário
+		double calculo = getHorasTrabalhadas() * (this.quartosAlugados * 0.08);
+		
+		//adicionando mais 8% para o salário do manobrista
+		super.calcularPagamento(calculo);
+		
 	}
 	
 }

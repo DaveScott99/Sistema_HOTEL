@@ -1,3 +1,4 @@
+
 package entities;
 
 public class Lavandeiro extends Funcionario {
@@ -14,12 +15,16 @@ public class Lavandeiro extends Funcionario {
 		this.pecasDeRoupasLavadas = pecasDeRoupasLavadas;
 	}
 	
-	@Override
-	public double calcularPagamento() {
-		
-		double salarioLavandeiro = super.calcularPagamento();
-		
-		return salarioLavandeiro = salarioLavandeiro+(salarioLavandeiro*(pecasDeRoupasLavadas * 0.05)/10);
-	}
+	//Método de calcular pagamento com override
+		@Override
+		public void calcularPagamento(double carrosGuardados) {
+			
+			//Pegando o valor original que vem da classe funcionário
+			double calculo = getHorasTrabalhadas() * (this.pecasDeRoupasLavadas * 0.10);
+			
+			//adicionando mais 10% para o salário do manobrista
+			super.calcularPagamento(calculo);
+			
+		}
 
 }

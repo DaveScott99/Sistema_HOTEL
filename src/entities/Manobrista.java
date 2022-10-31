@@ -1,7 +1,5 @@
 package entities;
 
-import javax.swing.JOptionPane;
-
 //Classe Motorista
 public class Manobrista extends Funcionario{
 	//Criação do atributo
@@ -20,10 +18,10 @@ public class Manobrista extends Funcionario{
 	@Override
 	public void calcularPagamento(double carrosGuardados) {
 		
-		//Pegando o valor original que vem da classe funcionário
+		//Atribuindo um bonus pela quantidade de carros guardados.
 		double calculo = getHorasTrabalhadas() * (this.carrosGuardados * 0.08);
 		
-		//adicionando mais 8% para o salário do manobrista
+		//adicionando o bonus para o salário do manobrista
 		super.calcularPagamento(calculo);
 		
 	}

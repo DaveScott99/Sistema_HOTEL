@@ -3,15 +3,13 @@ package entities;
 import javax.swing.JOptionPane;
 
 public class Hotel {
-
+	
 	public static void main(String[] args) {
 		menu();
 	}
 
 	public static void menu() {
 		
-		Funcionario funcionario = new Funcionario();
-
 		String cargo = JOptionPane
 				.showInputDialog("Digite o setor do funcionário (Manobrista / Atendente / Camareiro / Lavandeiro)")
 				.toUpperCase();
@@ -61,5 +59,6 @@ public class Hotel {
 			}
 
 	}
+
 
 }

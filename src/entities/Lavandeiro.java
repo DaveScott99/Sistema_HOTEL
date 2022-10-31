@@ -19,10 +19,10 @@ public class Lavandeiro extends Funcionario {
 		@Override
 		public void calcularPagamento(double carrosGuardados) {
 			
-			//Pegando o valor original que vem da classe funcionário
+			//Atribuindo um bonus pela quantidade de roupas lavadas.
 			double calculo = getHorasTrabalhadas() * (this.pecasDeRoupasLavadas * 0.10);
 			
-			//adicionando mais 10% para o salário do manobrista
+			//adicionando o bonus para o salário do lavandeiro
 			super.calcularPagamento(calculo);
 			
 		}

@@ -106,7 +106,7 @@ public class Funcionario {
 	/* 
 	 * Método para exibir os dados do funcionário.
 	 */
-	public void mostrarDados() {
+	public String mostrarDados() {
 		
 		String mensagem = "Dados do funcionário";
 		
@@ -118,7 +118,7 @@ public class Funcionario {
 		
 		mensagem += "\nSalario: " + dinheiro.format(getSalario());
 		
-		JOptionPane.showMessageDialog(null, mensagem);
+		return mensagem;
 		
 	}
 

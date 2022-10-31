@@ -17,10 +17,10 @@ public class Camareira extends Funcionario {
 		@Override
 		public void calcularPagamento(double carrosGuardados) {
 			
-			//Pegando o valor original que vem da classe funcionário
+			//Atribuindo um bonus pela quantidade de quartos arrumados.
 			double calculo = getHorasTrabalhadas() * (this.quartosArrumados * 0.05);
 			
-			//adicionando mais 5% para o salário do manobrista
+			//adicionando o bonus para o salário do camareiro
 			super.calcularPagamento(calculo);
 			
 		}

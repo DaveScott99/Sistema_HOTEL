@@ -4,8 +4,10 @@ import java.text.NumberFormat;
 
 import javax.swing.JOptionPane;
 
+// Superclasse Funcionario
 public class Funcionario {
 	
+	//Atributos
 	private int id;
 	private String nome;
 	private String setor;
@@ -14,6 +16,7 @@ public class Funcionario {
 	private double horasNoturnas = 0;
 	private double salario = 0;
 	
+	//Métodos GET e SET
 	public int getId() {
 		return id;
 	}
@@ -70,28 +73,23 @@ public class Funcionario {
 	}
 
 	/*
-	 * Método para calcular o pagamento de um funcionario.
+	 * Método para calcular o pagamento de um funcionário.
 	 * */
 	public void calcularPagamento(double taxa) {
 		
 		// Calcular horas noturnas.
-		double calcularValorNoturna = horasNoturnas * 20/100;
-		
-		//Calcular diferença entre horas normais e horas noturnas.
-		double diferencaHoras = horasTrabalhadas - horasNoturnas;
-		
-		
+		double calcularValorNoturno = horasNoturnas * 20/100;
 		
 		// Calcular o salario final.
-		double calcularSalario = horasTrabalhadas * valorPorHora + calcularValorNoturna + taxa; 
+		double calcularSalario = horasTrabalhadas * valorPorHora + calcularValorNoturno + taxa; 
 		
-		// Retorna o salario.
+		// Atribui valor ao atributo salario.
 		this.salario = calcularSalario;
 		
 	}
 	
 	/*
-	 * Método para inserir dados do funcionário.
+	 * Método para inserir os dados de um funcionário.
 	 * */
 	public void inserirDados() {
 		
@@ -104,7 +102,7 @@ public class Funcionario {
 	}
 	
 	/* 
-	 * Método para exibir os dados do funcionário.
+	 * Método para exibir os dados de um funcionário.
 	 */
 	public void mostrarDados() {
 		
@@ -121,7 +119,5 @@ public class Funcionario {
 		JOptionPane.showMessageDialog(null, mensagem);
 		
 	}
-
-	
 
 }

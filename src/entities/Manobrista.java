@@ -1,7 +1,7 @@
 package entities;
 
 //Classe Motorista
-public class Manobrista extends Funcionario{
+public class Manobrista extends Funcionario {
 	//Criação do atributo
 	private int carrosGuardados;
 

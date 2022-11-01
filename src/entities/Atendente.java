@@ -1,9 +1,12 @@
-
 package entities;
 
+// Subclasse Atendente
 public class Atendente extends Funcionario {
+	
+	// Atributos
 	private int quartosAlugados;
 
+	// Métodos GET e SET
 	public int getQuartosAlugados() {
 		return quartosAlugados;
 	}
